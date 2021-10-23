@@ -36,7 +36,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'company.apps.CompanyConfig',
+    'university.apps.UniversityConfig',
     'minifacebook.apps.MinifacebookConfig',
     'django.contrib.admin',
     'django.contrib.auth',

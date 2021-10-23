@@ -31,3 +31,16 @@ class Status(models.Model):
 
     def __str__(self):
         return f"<Status from={self.profile_id} at={self.date_time}>"
+
+
+class Poke(models.Model):
+    poker = models.ForeignKey(
+        Profile, null=False, on_delete=models.CASCADE, related_name="poke_poker"
+    )
+    pokee = models.ForeignKey(
+        Profile, null=False, on_delete=models.CASCADE, related_name="poke_pokee"
+    )
+    date_time = models.DateTimeField()
+
+    def __str__(self):
+        return f"<Poke from={self.poker_id} to={self.pokee_id} at={self.date_time}>"

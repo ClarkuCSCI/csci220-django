@@ -43,7 +43,11 @@ The first time you run it, this command will take a few minutes to complete. Thi
 
 When you are done running the application, you can stop it by typing `Control-C`.
 
-## Step 4: Load the Applications
+## Step 4: Run Migrations
+
+Follow the instructions below to run the database migrations. This will ensure the database has the schema for the applications.
+
+## Step 5: Load the Applications
 
 Load <http://localhost:8080> and you should be redirected to the "Django administration" login interface.
 

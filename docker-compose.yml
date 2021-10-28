@@ -4,6 +4,7 @@ volumes:
   django-gen:
   django-socket:
   postgres-data:
+  postgres-socket:
 
 services:
   django:
@@ -20,6 +21,7 @@ services:
       - "./django:/usr/src/django"
       - "django-socket:/var/www/uwsgi"
       - "django-gen:/gen"
+      - "postgres-socket:/var/run/postgresql"
 
   nginx:
     image: nginx:1.18.0
@@ -40,4 +42,5 @@ services:
     restart: unless-stopped
     volumes:
       - "postgres-data:/var/lib/postgresql/data"
+      - "postgres-socket:/var/run/postgresql"
       - "./postgres_files:/postgres_files"

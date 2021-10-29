@@ -8,11 +8,11 @@
 
 <table>
 <tr><th>Name</th><th>Status</th><th>Time</th></tr>
-{% for profile in profiles %}
+{% for status in statuses %}
   <tr>
-    <td>{{profile.first_name}} {{profile.last_name}}</td>
-    <td>{{profile.latest_status.message}}</td>
-    <td>{{profile.latest_status.date_time}}</td>
+    <td>{{status.profile.first_name}} {{status.profile.last_name}}</td>
+    <td>{{status.message}}</td>
+    <td>{{status.date_time}}</td>
   </tr>
 {% endfor %}
 </table>

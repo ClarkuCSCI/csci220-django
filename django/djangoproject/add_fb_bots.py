@@ -9,7 +9,7 @@ django.setup()
 
 from minifacebook.models import Poke, Profile, Status
 
-BATCH_SIZE = 1000
+BATCH_SIZE = 10000
 
 # https://www.ssa.gov/oact/babynames/decades/century.html
 FIRST_NAMES = [

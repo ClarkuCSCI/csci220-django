@@ -1,13 +1,12 @@
 FROM python:3.12
-MAINTAINER PeStory@clarku.edu
 
-# Directories for the source code
+# Directory for the volume-mounted source code
 RUN mkdir -p /usr/src/django/djangoproject
 
 # Install OS dependencies
 RUN apt-get update && apt-get install -y postgresql-client
 
-# Next, install the Python modules
+# Install Python module dependencies
 ADD requirements.txt /usr/src/django/requirements.txt
 RUN pip install -r /usr/src/django/requirements.txt
 
